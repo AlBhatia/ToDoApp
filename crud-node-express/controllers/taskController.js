@@ -8,7 +8,7 @@ const addTask = async (req, res) => {
         
         const { name, description, priority, status, dueDate } = req.body;
 
-        if (!name || !description || !priority || !status || !dueDate) {
+        if (!name || !description || !priority ) {
             return res.status(400).json({
                 status: 400,
                 success: false,
